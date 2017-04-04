@@ -1,0 +1,31 @@
+{
+  "name": "admin",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "array-to-csv": "^1.0.1",
+    "async": "^2.1.5",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.16.1",
+    "cfenv": "1.0.x",
+    "cookie-parser": "~1.4.3",
+    "csv": "^1.1.1",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "express-session": "*",
+    "json2csv": "^3.7.3",
+    "jwt-simple": "^0.5.1",
+    "mongoose": "^4.8.3",
+    "morgan": "~1.8.1",
+    "ngstorage": "^0.3.11",
+    "nodemailer": "^3.1.8",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "request": "^2.79.0",
+    "serve-favicon": "~2.3.2",
+    "underscore": "^1.8.3"
+  }
+}

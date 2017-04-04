@@ -1,0 +1,48 @@
+.loginscreen.middle-box {
+  position: absolute;
+  margin-top: -200px;
+  margin-left: -150px;
+  top: 50%;
+  left: 50%;
+}
+
+.loginscreen .logo {
+  width: 300px;
+  height: 90px;
+}
+
+.loginscreen .logo .logo-image {
+  width: 100px;
+  float: left;
+  margin-top: -30px;
+  text-align: left;
+  margin-left: -20px;
+}
+
+.loginscreen .logo .logo-image img {
+  width: 100px;
+}
+
+.loginscreen .logo .logo-string {
+  width: 300px;
+  text-align: right;
+}
+
+.loginscreen .logo .logo-string .logo-name {
+  font-size: 42px;
+  letter-spacing: -3px;
+}
+
+.loginscreen a {
+  color: #9ea6b9;
+}
+
+.loginscreen p.copyright {
+  color: #9ea6b9;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #3e495f !important;
+  }
+}

@@ -1,0 +1,43 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+            <li class="nav-header">
+
+                <div class="profile-element">
+                    <img src="img/logo.png" class="logo">
+                    <div class="logo-title">
+                      <div class="welcome">
+                        Welcome
+                      </div>
+                      <div class="admin">
+                        Administrator
+                      </div>
+                    </div>
+                </div>
+                <div class="logo-element">
+                    G
+                </div>
+            </li>
+
+            <li ui-sref-active="active">
+                <a ui-sref="index.dashboard"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span> </a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.companies"><i class="fa fa-home"></i> <span class="nav-label">Companies</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.workers"><i class="fa fa-user"></i> <span class="nav-label">Workers</span></a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.jobs"><i class="fa fa-gavel"></i> <span class="nav-label">Jobs</span></a>
+            </li>
+            <li>
+                <a href=""><i class="fa fa-cog"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse">
+                    <li><a ui-sref="index.change-password">Change Password</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+</nav>

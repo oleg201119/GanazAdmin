@@ -1,0 +1,33 @@
+.nav-header {
+  padding: 35px 10px 10px 10px;
+}
+
+.profile-element {
+  height: 65px;
+}
+
+.profile-element .logo {
+  width: 50px;
+  float: left;
+  margin-top: 4px;
+}
+
+.profile-element .logo-title {
+  float: left;
+  margin-left: 16px;
+  color: #9ea6b9;
+}
+
+.profile-element .logo-title .welcome {
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.profile-element .logo-title .admin {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.logo-element {
+  color: #98c73a;
+}
