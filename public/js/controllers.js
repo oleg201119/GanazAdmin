@@ -12,7 +12,7 @@ function MainCtrl($scope, AuthService) {
 // Login Controller
 function LoginCtrl($scope, notify, AuthService) {
     $scope.auth = {
-      username: 'admin',
+      username: 'GanazApp@yandex.com',
       password: ''
     };
 
@@ -53,6 +53,11 @@ function ForgotPasswordCtrl($scope, notify, SettingsService) {
             notify({
               message: 'Email sent. Please check your email box',
               classes: 'alert-success'
+            });
+          } else {
+            notify({
+              message: response.data,
+              classes: 'alert-danger'
             });
           }
         },
@@ -136,7 +141,7 @@ function ModalInstanceCtrl ($scope, $uibModalInstance, CompaniesService, Workers
 
   CompaniesService.getCompanies().then(
     function(response) {
-      $scope.companies = response.companies;
+      $scope.companies = response.companies;console.log(response.companies);
     },
     function(error) {
       console.log(error);
@@ -146,7 +151,7 @@ function ModalInstanceCtrl ($scope, $uibModalInstance, CompaniesService, Workers
   $scope.add = function() {
     $uibModalInstance.close();
 
-    WorkersService.inviteWorker($scope.worker.company._id, $scope.worker.phonenumber).then(
+    WorkersService.inviteWorker($scope.worker.company, $scope.worker.phonenumber).then(
       function(response) {
         console.log(response);
       },

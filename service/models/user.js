@@ -36,11 +36,20 @@ var CompanySchema = new Schema({
     name: {
         type: String
     },
+    name_translated: {
+        type: String
+    },
     address: {
         type: AddressSchema
     },
     description: {
         type: String
+    },
+    description_translated: {
+        type: String
+    },
+    auto_translate: {
+        type: Boolean
     }
 });
 

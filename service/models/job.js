@@ -56,6 +56,9 @@ var JobSchema = new Schema({
 	title: {
 		type: String
 	},
+    title_translated: {
+        type: String
+    },
     pay: {
         type: PaySchema,
         required: true

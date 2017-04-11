@@ -174,7 +174,7 @@ function WorkersService($http, $q, BASE_URL) {
 
     var service = {};
 
-    service.inviteWorker = function(companyId, phoneNumber) {
+    service.inviteWorker = function(companyUser, phoneNumber) {
       var deferred = $q.defer();
       var url = BASE_URL + '/api/invite';
       var config = {
@@ -185,7 +185,8 @@ function WorkersService($http, $q, BASE_URL) {
       };
 
       var data = {
-        company_user_id: companyId,
+        company_user_id: companyUser._id,
+        company_name: companyUser.company.name,
         phone_number: phoneNumber
       };
 

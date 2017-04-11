@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "forever": "forever start -c node app.js"
   },
   "dependencies": {
     "array-to-csv": "^1.0.1",
@@ -25,6 +26,7 @@
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
     "request": "^2.79.0",
+    "twilio": "^2.11.1",
     "serve-favicon": "~2.3.2",
     "underscore": "^1.8.3"
   }
