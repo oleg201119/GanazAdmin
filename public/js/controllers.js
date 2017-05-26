@@ -141,7 +141,8 @@ function ModalInstanceCtrl ($scope, $uibModalInstance, CompaniesService, Workers
 
   CompaniesService.getCompanies().then(
     function(response) {
-      $scope.companies = response.companies;console.log(response.companies);
+      $scope.companies = response.companies;
+      console.log(response.companies);
     },
     function(error) {
       console.log(error);

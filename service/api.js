@@ -79,7 +79,7 @@ router.post('/register', function(req, res) {
 });
 
 router.post('/login', function(req, res) {
-
+console.log(req.body);
 		Admin.findOne({
 			username: req.body.username,
 			password: req.body.password
@@ -413,10 +413,11 @@ router.get('/companies', ensureAuthorized, function(req, res) {
 router.post('/invite', ensureAuthorized, function(req, res) {
 
   var newInvite = new Invite({
-    company_user_id: req.company_user_id,
+    company_user_id: req.body.company_user_id,
     phone_number: req.body.phone_number
   });
 
+  console.log(req.body);
   newInvite.save(function(err) {
     if (err) {
       res.json({
@@ -429,7 +430,7 @@ router.post('/invite', ensureAuthorized, function(req, res) {
       twilio_client.messages.create({
         from: config.TWILIO_PHONE_NUMBER,
         to: "+" + newInvite.phone_number.country_code + newInvite.phone_number.local_number,
-        body: `Hello, you are invited by ${req.company_name} to Ganaz Platform as a worker. You can search/apply for new job, and communicate with owners. (${config.appstore_url})`
+        body: `Hello, you are invited by ${req.body.company_name} to Ganaz Platform as a worker. You can search/apply for new job, and communicate with owners. (${config.appstore_url})`
       }, function(err, message) {
         if (err) {
           console.error(err.message);

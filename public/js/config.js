@@ -116,8 +116,8 @@ function config($stateProvider, $urlRouterProvider, $ocLazyLoadProvider, $httpPr
 angular
     .module('dashboard')
     .config(config)
-    .constant('BASE_URL', 'http://ec2-35-163-42-136.us-west-2.compute.amazonaws.com:6001')
-    //.constant('BASE_URL', 'http://10.0.0.109:6002')
+    //.constant('BASE_URL', 'http://ec2-35-163-42-136.us-west-2.compute.amazonaws.com:6001')
+    .constant('BASE_URL', 'http://10.0.0.109:6002')
     .run(function($rootScope, $state, AuthService) {
 
         $rootScope.$on("$stateChangeStart", function (event, toState, toParams, fromState, fromParams) {
